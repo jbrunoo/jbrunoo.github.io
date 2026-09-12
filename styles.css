@@ -1,0 +1,275 @@
+:root {
+  color-scheme: light;
+  --bg: #f7f3ea;
+  --ink: #17140f;
+  --muted: #625b50;
+  --card: rgba(255, 252, 245, 0.9);
+  --line: rgba(30, 24, 16, 0.12);
+  --accent: #246b55;
+  --accent-2: #f3b14d;
+  --shadow: 0 24px 70px rgba(37, 29, 16, 0.12);
+  font-family:
+    Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Apple SD Gothic Neo", "Noto Sans KR", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(circle at 14% 10%, rgba(243, 177, 77, 0.22), transparent 28rem),
+    radial-gradient(circle at 88% 2%, rgba(36, 107, 85, 0.16), transparent 30rem),
+    var(--bg);
+  color: var(--ink);
+}
+
+a {
+  color: inherit;
+}
+
+.hero,
+main,
+.footer {
+  width: min(1120px, calc(100% - 32px));
+  margin: 0 auto;
+}
+
+.hero {
+  min-height: 48vh;
+  padding: 24px 0 56px;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 16px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.nav-links a,
+.meta-links a,
+.footer a {
+  text-underline-offset: 4px;
+}
+
+.hero-copy {
+  max-width: 760px;
+  padding: 84px 0 0;
+}
+
+.eyebrow,
+.app-kicker {
+  margin: 0 0 10px;
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: -0.04em;
+}
+
+h1 {
+  max-width: 680px;
+  font-size: clamp(2.8rem, 8vw, 6.5rem);
+}
+
+h2 {
+  font-size: clamp(1.8rem, 4vw, 3.2rem);
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.hero-copy p:last-child,
+.note-card p,
+.app-body p {
+  color: var(--muted);
+  font-size: 1.04rem;
+  line-height: 1.72;
+}
+
+.section {
+  padding: 28px 0;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.app-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.app-card,
+.note-card,
+.policy-card {
+  border: 1px solid var(--line);
+  border-radius: 34px;
+  background: var(--card);
+  box-shadow: var(--shadow);
+}
+
+.app-card {
+  display: grid;
+  grid-template-columns: 112px 1fr;
+  gap: 24px;
+  padding: 26px;
+}
+
+.app-icon {
+  width: 112px;
+  height: 112px;
+  border-radius: 28px;
+  box-shadow: 0 16px 38px rgba(37, 29, 16, 0.18);
+}
+
+.button-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 999px;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.button.primary {
+  background: var(--ink);
+  color: #fffaf0;
+}
+
+.button.secondary {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.52);
+}
+
+.meta-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 18px;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.note-card {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 24px;
+  margin: 40px 0 64px;
+  padding: 30px;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 28px 0 44px;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.page {
+  width: min(900px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 24px 0 54px;
+}
+
+.page-hero {
+  padding: 56px 0 24px;
+}
+
+.policy-card {
+  padding: 30px;
+}
+
+.policy-card h2 {
+  margin-top: 32px;
+  font-size: 1.35rem;
+  letter-spacing: -0.02em;
+}
+
+.policy-card h2:first-child {
+  margin-top: 0;
+}
+
+.policy-card p,
+.policy-card li {
+  color: var(--muted);
+  line-height: 1.75;
+}
+
+@media (max-width: 820px) {
+  .app-grid,
+  .note-card {
+    grid-template-columns: 1fr;
+  }
+
+  .app-card {
+    grid-template-columns: 86px 1fr;
+    padding: 20px;
+    border-radius: 26px;
+  }
+
+  .app-icon {
+    width: 86px;
+    height: 86px;
+    border-radius: 22px;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 540px) {
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .hero-copy {
+    padding-top: 56px;
+  }
+
+  .app-card {
+    grid-template-columns: 1fr;
+  }
+}
