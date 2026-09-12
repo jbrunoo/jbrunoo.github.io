@@ -1,3 +1,0 @@
-# app-ads.txt for JBRUNOO apps
-# Canonical URL: https://jbrunoo.github.io/app-ads.txt
-google.com, pub-5658794292230745, DIRECT, f08c47fec0942fa0
