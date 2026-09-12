@@ -6,9 +6,10 @@
     <title>JBRUNOO Apps</title>
     <meta
       name="description"
-      content="JBRUNOO가 만드는 Android 앱 소개, Google Play 링크, 개인정보처리방침, app-ads.txt 안내 페이지입니다."
+      content="JBRUNOO가 만드는 Android 앱 소개와 Google Play 링크를 확인할 수 있는 공식 웹사이트입니다."
     />
     <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
   </head>
   <body>
     <header class="hero">
@@ -16,14 +17,16 @@
         <a class="brand" href="/">JBRUNOO</a>
         <div class="nav-links">
           <a href="#apps">Apps</a>
-          <a href="/app-ads.txt">app-ads.txt</a>
+          <button class="language-toggle" type="button" data-language-toggle>English</button>
         </div>
       </nav>
 
       <section class="hero-copy">
-        <p class="eyebrow">Independent Android Developer</p>
-        <h1>가볍고 오래 쓰기 좋은 앱을 만듭니다.</h1>
-        <p>
+        <h1 data-i18n-ko="가볍고 오래 쓰기 좋은 앱을 만듭니다." data-i18n-en="Simple apps made to be opened again.">가볍고 오래 쓰기 좋은 앱을 만듭니다.</h1>
+        <p
+          data-i18n-ko="복잡한 기능보다 사용자가 바로 이해하고 다시 열고 싶어지는 경험을 우선합니다. 이곳은 JBRUNOO 앱의 공식 웹사이트입니다."
+          data-i18n-en="JBRUNOO focuses on clear, lightweight experiences that are easy to understand and worth returning to. This is the official website for JBRUNOO apps."
+        >
           복잡한 기능보다 사용자가 바로 이해하고 다시 열고 싶어지는 경험을 우선합니다.
           이곳은 JBRUNOO 앱의 공식 웹사이트입니다.
         </p>
@@ -34,69 +37,55 @@
       <section id="apps" class="section">
         <div class="section-heading">
           <p class="eyebrow">Apps</p>
-          <h2>현재 준비 중인 앱</h2>
+          <h2 data-i18n-ko="현재 준비 중인 앱" data-i18n-en="Apps in progress">현재 준비 중인 앱</h2>
         </div>
 
         <div class="app-grid">
           <article class="app-card">
-            <img src="/assets/checkmate.svg" alt="Checkmate app icon" class="app-icon" />
+            <img src="/assets/checkmate-512.png" alt="Checkmate app icon" class="app-icon" />
             <div class="app-body">
               <p class="app-kicker">Checklist</p>
               <h3>Checkmate</h3>
-              <p>
+              <p
+                data-i18n-ko="체크리스트를 부담 없이 만들고, 오늘 해야 할 일을 빠르게 확인하는 로컬 우선 앱입니다."
+                data-i18n-en="A local-first checklist app for creating lists without friction and quickly seeing what needs to be done today."
+              >
                 체크리스트를 부담 없이 만들고, 오늘 해야 할 일을 빠르게 확인하는 로컬 우선 앱입니다.
               </p>
               <div class="button-row">
                 <a class="button primary" href="https://play.google.com/store/apps/details?id=com.jbrunoo.checkmate">
                   Google Play
                 </a>
-                <a class="button secondary" href="/checkmate/">자세히 보기</a>
-              </div>
-              <div class="meta-links">
-                <a href="/checkmate/privacy.html">Privacy Policy</a>
-                <a href="/checkmate/app-ads.txt">app-ads.txt</a>
+                <a class="button secondary" href="/checkmate/" data-i18n-ko="자세히 보기" data-i18n-en="Learn more">자세히 보기</a>
               </div>
             </div>
           </article>
 
           <article class="app-card">
-            <img src="/assets/splitpop.svg" alt="SplitPop app icon" class="app-icon" />
+            <img src="/assets/splitpop-512.png" alt="SplitPop app icon" class="app-icon" />
             <div class="app-body">
               <p class="app-kicker">Game</p>
               <h3>SplitPop</h3>
-              <p>
+              <p
+                data-i18n-ko="짧은 시간 안에 가볍게 즐길 수 있는 캐주얼 게임입니다. 빠르게 시작하고 깔끔하게 끝나는 경험을 목표로 합니다."
+                data-i18n-en="A casual game made for short sessions, with a fast start and a clean finish."
+              >
                 짧은 시간 안에 가볍게 즐길 수 있는 캐주얼 게임입니다. 빠르게 시작하고 깔끔하게 끝나는 경험을 목표로 합니다.
               </p>
               <div class="button-row">
                 <a class="button primary" href="https://play.google.com/store/apps/details?id=com.jbrunoo.splitpop">
                   Google Play
                 </a>
-                <a class="button secondary" href="/splitpop/">자세히 보기</a>
-              </div>
-              <div class="meta-links">
-                <a href="/splitpop/privacy.html">Privacy Policy</a>
-                <a href="/splitpop/app-ads.txt">app-ads.txt</a>
+                <a class="button secondary" href="/splitpop/" data-i18n-ko="자세히 보기" data-i18n-en="Learn more">자세히 보기</a>
               </div>
             </div>
           </article>
         </div>
       </section>
-
-      <section class="note-card" aria-labelledby="ads-note-title">
-        <div>
-          <p class="eyebrow">For ads crawlers</p>
-          <h2 id="ads-note-title">app-ads.txt는 루트 파일을 기준으로 운영합니다.</h2>
-        </div>
-        <p>
-          Google AdMob crawler는 Play Store에 등록한 개발자 웹사이트의 hostname을 기준으로
-          <a href="/app-ads.txt">/app-ads.txt</a>를 확인합니다. 앱별 폴더의 app-ads.txt는 사람이 보기 쉬운 보조 링크입니다.
-        </p>
-      </section>
     </main>
 
     <footer class="footer">
       <p>© <span id="year">2026</span> JBRUNOO. All rights reserved.</p>
-      <p><a href="/checkmate/privacy.html">Checkmate Privacy</a> · <a href="/splitpop/privacy.html">SplitPop Privacy</a></p>
     </footer>
   </body>
 </html>

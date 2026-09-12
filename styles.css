@@ -66,9 +66,23 @@ main,
 }
 
 .nav-links a,
+.language-toggle,
 .meta-links a,
 .footer a {
   text-underline-offset: 4px;
+}
+
+.language-toggle {
+  appearance: none;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--ink);
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  min-height: 36px;
+  padding: 0 13px;
 }
 
 .hero-copy {
@@ -193,7 +207,7 @@ h3 {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 24px;
-  margin: 40px 0 64px;
+  margin: 40px 0 28px;
   padding: 30px;
 }
 

@@ -6,27 +6,30 @@
     <title>Checkmate by JBRUNOO</title>
     <meta name="description" content="Checkmate는 체크리스트를 부담 없이 만들고 관리하는 로컬 우선 앱입니다." />
     <link rel="stylesheet" href="/styles.css" />
+    <script src="/script.js" defer></script>
   </head>
   <body>
     <main class="page">
       <nav class="topbar" aria-label="Primary navigation">
         <a class="brand" href="/">JBRUNOO</a>
         <div class="nav-links">
-          <a href="/checkmate/privacy.html">Privacy</a>
-          <a href="/app-ads.txt">app-ads.txt</a>
+          <a href="/">Apps</a>
+          <button class="language-toggle" type="button" data-language-toggle>English</button>
         </div>
       </nav>
 
       <section class="page-hero">
-        <img src="/assets/checkmate.svg" alt="Checkmate app icon" class="app-icon" />
+        <img src="/assets/checkmate-512.png" alt="Checkmate app icon" class="app-icon" />
         <p class="eyebrow">Checklist</p>
         <h1>Checkmate</h1>
-        <p>
+        <p
+          data-i18n-ko="오늘 해야 할 일을 덜 복잡하게 보고, 직접 만든 체크리스트를 기기 안에 저장해 사용하는 앱입니다."
+          data-i18n-en="A local-first checklist app that keeps today’s tasks simple and stores your lists on your device."
+        >
           오늘 해야 할 일을 덜 복잡하게 보고, 직접 만든 체크리스트를 기기 안에 저장해 사용하는 앱입니다.
         </p>
         <div class="button-row">
           <a class="button primary" href="https://play.google.com/store/apps/details?id=com.jbrunoo.checkmate">Google Play</a>
-          <a class="button secondary" href="/checkmate/privacy.html">Privacy Policy</a>
         </div>
       </section>
     </main>
